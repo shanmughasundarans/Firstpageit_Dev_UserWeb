@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="HomePage.Homepage">
+        <methods>
+          <include name="FIPGTS_00003_FIPGTS_00003"/>
+          <include name="FIPGTS_00002_FIPGTS_00002"/>
+          <include name="FIPGTS_00003_FIPGTS_00001"/>
+          <include name="FIPGTS_00001_FIPGTS_00001"/>
+          <include name="Close_Browser"/>
+          <include name="FIPGTS_00002_FIPGTS_00001"/>
+          <include name="FIPGTS_00003_FIPGTS_00002"/>
+          <include name="launch_Browser"/>
+          <include name="FIPGTS_00002_FIPGTS_000011"/>
+          <include name="FIPGTS_00002_FIPGTS_000012"/>
+          <include name="FIPGTS_00002_FIPGTS_000010"/>
+          <include name="FIPGTS_00001_FIPGTS_00008"/>
+          <include name="FIPGTS_00002_FIPGTS_00009"/>
+          <include name="FIPGTS_00002_FIPGTS_00005"/>
+          <include name="FIPGTS_00003_FIPGTS_00008"/>
+          <include name="FIPGTS_00001_FIPGTS_00005"/>
+          <include name="FIPGTS_00002_FIPGTS_00008"/>
+          <include name="FIPGTS_00003_FIPGTS_00006"/>
+          <include name="FIPGTS_00002_FIPGTS_00007"/>
+          <include name="FIPGTS_00001_FIPGTS_00003"/>
+          <include name="FIPGTS_00003_FIPGTS_00009"/>
+          <include name="FIPGTS_00001_FIPGTS_00006"/>
+          <include name="FIPGTS_00003_FIPGTS_00004"/>
+          <include name="FIPGTS_00003_FIPGTS_00007"/>
+          <include name="FIPGTS_00002_FIPGTS_00004"/>
+          <include name="FIPGTS_00001_FIPGTS_00004"/>
+          <include name="FIPGTS_00002_FIPGTS_00003"/>
+          <include name="FIPGTS_00001_FIPGTS_00007"/>
+          <include name="FIPGTS_00002_FIPGTS_00006"/>
+          <include name="FIPGTS_00002"/>
+        </methods>
+      </class> <!-- HomePage.Homepage -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
