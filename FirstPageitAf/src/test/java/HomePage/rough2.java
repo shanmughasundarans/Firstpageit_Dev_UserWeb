@@ -144,7 +144,7 @@ public class rough2 {
 				}
 				else {
 					
-					System.out.println("FIPGTS_00003_FIPGTS_00009= Fails");
+					System.out.println("GIT FIPGTS_00003_FIPGTS_00009= Fails");
 				}
 				
 					
