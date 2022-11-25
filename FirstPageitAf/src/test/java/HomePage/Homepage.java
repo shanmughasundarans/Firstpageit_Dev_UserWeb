@@ -16,12 +16,15 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Homepage {
 	WebDriver  driver;
 @BeforeSuite
 public void launch_Browser() throws InterruptedException {
-		
-		System.setProperty("webdriver.chrome.driver","E:\\Automation Testing Tools\\Chrome Drivers\\chromedriver.exe");
+	
+	     WebDriverManager.chromedriver().setup();
+		//System.setProperty("webdriver.chrome.driver","E:\\Automation Testing Tools\\Chrome Drivers\\chromedriver.exe");
 		driver =new ChromeDriver();
 		
 		driver.get("http://18.218.59.128/firstpage/public/");
