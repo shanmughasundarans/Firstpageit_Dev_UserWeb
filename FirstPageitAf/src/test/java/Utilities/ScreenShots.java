@@ -13,7 +13,7 @@ import org.testng.ITestResult;
 
 import HomePage.Homepage;
 
-public class ScreenShots  extends Homepage implements ITestListener {
+public class ScreenShots  extends BaseClass implements ITestListener {
 	
 
 public static void Screenshots(String File) throws IOException {
