@@ -1,44 +1,18 @@
 package HomePage;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Set;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import Utilities.BaseClass;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class Homepage {
-	 public static WebDriver driver;
-
-	@BeforeSuite
-	public void launch_Browser() throws InterruptedException {
-
-		WebDriverManager.chromedriver().setup();
-		// System.setProperty("webdriver.chrome.driver","E:\\Automation Testing
-		// Tools\\Chrome Drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
-
-		driver.get("http://18.218.59.128/firstpage/public/");
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-	}
+public class Homepage extends BaseClass {
 
 	@Test(priority = 1, enabled = true)
 	public void FIPGTS_00001_FIPGTS_00001() throws InterruptedException {
@@ -50,7 +24,7 @@ public class Homepage {
 	@Test(priority = 2, enabled = true)
 	public void FIPGTS_00002() throws InterruptedException {
 
-		WebElement SearchBox = driver.findElement(By.xpath("//inpumt[@class='search_input']"));
+		WebElement SearchBox = driver.findElement(By.xpath("//input[@class='search_input']"));
 		SearchBox.click();
 		Thread.sleep(2000);
 
@@ -94,7 +68,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void FIPGTS_00001_FIPGTS_00004() throws InterruptedException {
 		Actions act = new Actions(driver);
 		WebElement Knowmore = driver.findElement(By.xpath("//*[contains(text(),'SignUp/LogIn')]"));
@@ -109,7 +83,7 @@ public class Homepage {
 	}
 
 //Knowmore Option is highlighted
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 5, enabled = true)
 	public void FIPGTS_00001_FIPGTS_00005() throws InterruptedException {
 
 		Actions act = new Actions(driver);
@@ -145,7 +119,7 @@ public class Homepage {
 	}
 
 //pagescroling
-	@Test(priority = 6, enabled = false)
+	@Test(priority = 6, enabled = true)
 	public void FIPGTS_00001_FIPGTS_00006() throws InterruptedException {
 
 //	JavascriptExecutor executor = (JavascriptExecutor) driver;
@@ -162,7 +136,7 @@ public class Homepage {
 		action.click();
 	}
 
-	@Test(priority = 7, enabled = false)
+	@Test(priority = 7, enabled = true)
 	public void FIPGTS_00001_FIPGTS_00007() throws InterruptedException {
 
 		Actions act = new Actions(driver);
@@ -176,7 +150,7 @@ public class Homepage {
 		action.click();
 	}
 
-	@Test(priority = 8, enabled = false)
+	@Test(priority = 8, enabled = true)
 	public void FIPGTS_00001_FIPGTS_00008() throws InterruptedException {
 
 		Actions act = new Actions(driver);
@@ -191,7 +165,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 10, enabled = false)
+	@Test(priority = 10, enabled = true)
 
 	public void FIPGTS_00002_FIPGTS_00001() throws InterruptedException {
 		Actions act = new Actions(driver);
@@ -222,7 +196,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 11, enabled = false)
+	@Test(priority = 11, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00002() throws InterruptedException {
 		Actions act = new Actions(driver);
 		WebElement knowmore = driver.findElement(By.xpath("//a[contains(text(),'Know More')]"));
@@ -253,7 +227,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 12, enabled = false)
+	@Test(priority = 12, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00003() throws InterruptedException {
 		Actions act = new Actions(driver);
 		WebElement knowmore = driver.findElement(By.xpath("//a[contains(text(),'Know More')]"));
@@ -282,7 +256,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 13, enabled = false)
+	@Test(priority = 13, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00004() throws InterruptedException {
 		Actions act = new Actions(driver);
 		WebElement knowmore = driver.findElement(By.xpath("//a[contains(text(),'Know More')]"));
@@ -311,7 +285,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 14, enabled = false)
+	@Test(priority = 14, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00005() throws InterruptedException {
 		Actions act = new Actions(driver);
 		WebElement knowmore = driver.findElement(By.xpath("//a[contains(text(),'Know More')]"));
@@ -340,7 +314,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 15, enabled = false)
+	@Test(priority = 15, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00006() throws InterruptedException {
 		Actions act = new Actions(driver);
 		WebElement knowmore = driver.findElement(By.xpath("//a[contains(text(),'Know More')]"));
@@ -369,7 +343,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 16, enabled = false)
+	@Test(priority = 16, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00007() throws InterruptedException {
 
 		String FIPGTS_00002_FIPGTS_00007FirstPageHome = driver.getWindowHandle();
@@ -404,7 +378,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 17, enabled = false)
+	@Test(priority = 17, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00008() throws InterruptedException {
 
 		String FIPGTS_00002_FIPGTS_00008FirstPageHome = driver.getWindowHandle();
@@ -436,7 +410,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 18, enabled = false)
+	@Test(priority = 18, enabled = true)
 	public void FIPGTS_00002_FIPGTS_00009() throws InterruptedException {
 
 		String FIPGTS_00002_FIPGTS_00009FirstPageHome = driver.getWindowHandle();
@@ -465,7 +439,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 19, enabled = false)
+	@Test(priority = 19, enabled = true)
 	public void FIPGTS_00002_FIPGTS_000010() throws InterruptedException {
 
 		String FIPGTS_00002_FIPGTS_000010_FirstPageHome = driver.getWindowHandle();
@@ -496,7 +470,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 20, enabled = false)
+	@Test(priority = 20, enabled = true)
 	public void FIPGTS_00002_FIPGTS_000011() throws InterruptedException {
 
 		String FIPGTS_00002_FIPGTS_000012_FirstPageHome = driver.getWindowHandle();
@@ -526,7 +500,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 21, enabled = false)
+	@Test(priority = 21, enabled = true)
 
 	public void FIPGTS_00002_FIPGTS_000012() throws InterruptedException {
 
@@ -558,7 +532,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 22, enabled = false)
+	@Test(priority = 22, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00001() throws InterruptedException {
 		String FIPGTS_00003_FIPGTS_00001FirstPageHome = driver.getWindowHandle();
 		Actions act = new Actions(driver);
@@ -585,7 +559,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 23, enabled = false)
+	@Test(priority = 23, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00002() throws InterruptedException {
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -597,7 +571,7 @@ public class Homepage {
 		Thread.sleep(2000);
 	}
 
-	@Test(priority = 24, enabled = false)
+	@Test(priority = 24, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00003() throws InterruptedException {
 		WebElement FIPGTS_00003_FIPGTS_00003Firstpageit = driver.findElement(By.xpath("/html/body/nav/a/h4/img"));
 		FIPGTS_00003_FIPGTS_00003Firstpageit.click();
@@ -606,7 +580,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 25, enabled = false)
+	@Test(priority = 25, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00004() throws InterruptedException {
 
 		Actions act = new Actions(driver);
@@ -645,7 +619,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 26, enabled = false)
+	@Test(priority = 26, enabled = true)
 	public boolean FIPGTS_00003_FIPGTS_00005() throws InterruptedException {
 
 		Actions act = new Actions(driver);
@@ -672,7 +646,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 27, enabled = false)
+	@Test(priority = 27, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00006() throws InterruptedException {
 
 //		driver.get("http://18.218.59.128/firstpage/public/Know_More#pitch");
@@ -702,7 +676,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 28, enabled = false)
+	@Test(priority = 28, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00007() throws InterruptedException {
 
 		String FIPGTS_00003_FIPGTS_00007_FirstPageHome = driver.getWindowHandle();
@@ -734,7 +708,7 @@ public class Homepage {
 
 	}
 
-	@Test(priority = 29, enabled = false)
+	@Test(priority = 29, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00008() throws InterruptedException {
 
 		Actions act = new Actions(driver);
@@ -762,7 +736,7 @@ public class Homepage {
 		}
 	}
 
-	@Test(priority = 30, enabled = false)
+	@Test(priority = 30, enabled = true)
 	public void FIPGTS_00003_FIPGTS_00009() throws InterruptedException {
 
 		String FIPGTS_00003_FIPGTS_00009_FirstPageHome = driver.getWindowHandle();
@@ -798,21 +772,4 @@ public class Homepage {
 		}
 	}
 
-	public void Screenshot(ITestResult result, WebDriver driver) throws IOException {
-
-		if (ITestResult.FAILURE == result.getStatus()) {
-			TakesScreenshot scrShot =((TakesScreenshot)driver);
-			 File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-			 File DestFile=new File("E:\\GIT_HUB\\Firstpageit_Dev_UserWeb\\FirstPageitAf\\Screenshots\\fail.png");
-			 FileUtils.copyFile(SrcFile, DestFile);
-
-		}
-
-	}
-
-	@AfterSuite
-	public void Close_Browser() {
-
-		driver.close();
-	}
 }
